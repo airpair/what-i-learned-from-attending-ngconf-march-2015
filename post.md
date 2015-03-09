@@ -8,7 +8,7 @@ scheduling component running in 1.3, 1.3 + React, then in Angular 2. Check it ou
 Despite my continued misgivings about TypeScript (see [below](#typescript)), the fact that the developers repeatedly said
 that you don't need it to write Angular 2 applications makes me much more keen to try Angular 2 sooner, rather than later.
 
-The fact that change detection is unidirectional now (from Model > Component > View) is a good thing for understandability of
+Making change detection unidirectional (from Model > Component > View) is a good thing for understandability of
 Angular and for performance. I'm not sure if it is related to the Flux architecture's notion of unidirectional data flow, but
 I think it does.
 
@@ -48,7 +48,7 @@ The fact that **ngNewRouter**, **ngTranslate**, and **ngAnimate** are all based 
 
 ## Building for large applications
 Jen Bourney's [presentation](http://youtu.be/cVTN8msr5DE?list=PLOETEcp3DkCoNnlhE-7fovYvqwVPrRiY7) on building platforms
-with Angular was salient to the work that I'm doing with Odecee. There's a few things I can apply to my current project:
+with Angular was salient to the work that I'm doing with [Odecee](https://www.odecee.com.au/). There's a few things I can apply to my current project:
 
 - Optimising the lazy-load process to load modules with temporary routes initially, until such time as the actual module
   is loaded and loads it's own routes (and then cleans up the temporary route. This is much better than the main routing
@@ -78,7 +78,7 @@ in a data-access layer (implemented as a service, in Angular).
 
 So I'm hoping that these demos that we've seen are understood by the community to be *demos*, not *how-tos* for using these
 data services. If not, every new version of Firebase/Wakenda/BackAnd that is released will force you to touch your view-logic 
-code instead of your centralised data-access code.
+code instead of your data-access code.
 
 
 <a name="typescript"></a>
@@ -95,7 +95,7 @@ IDE work properly:
 "Two steps isn't so bad!", I hear you say! Well, then there's compiling and deployment steps:
 
 - I need an IDE that compiles the code automatically, or a build task to do this (which increases my debug loop).
-- I need to seperate the source code from the compiled code (WebStorm by default generates your JS code beside the TypeScript
+- I need to separate the source code from the compiled code (WebStorm by default generates your JS code beside the TypeScript
   file, but you can configure that).
 - Then I need to make sure that the generated code runs on browsers that the app must support. And depending on the ES6
   features I've used, I need to include a shim.
@@ -106,23 +106,25 @@ that it could help you debug the JAR. It was extra configuration that I feel I s
 
 Summary: As long as TypeScript increases my development effort, I don't intend to use it. But if that changes, I'll reconsider.
 
+*Note:* Kent C Dodds suggested I check out the [webpack videos](https://egghead.io/search?q=webpack) on Egghead to understand how Webpack makes things easier. I'll do that soon.
+
 
 ## Google Material Design
 I have mixed feelings about this. 
 
 ### Pros
 The Material design components that Google have built look pretty good. They appear to make it pretty easy to get a material-looking
-up working quickly. The 10-minute demo we saw on day 2 (despite some editing-tricks) was pretty good.
+application working quickly. The 10-minute demo we saw on day 2 (despite some editing-tricks) was pretty good.
 
 ### Cons
-If I use Google Material Design, won't my app be just like every other Material Design app? I guess it just feels *too* prescriptive, 
+If I use Google Material Design, won't my app be just like *every other Material Design app*? I guess it just feels *too* prescriptive, 
 like Microsoft's UI Guidelines were for Windows programs. Now don't get me wrong - I'm *for* UI conventions that make it
-easy for people to use new apps. But as a user, do I want my apps to all look and feel the same (aside from some theme colours)? 
+easy for people to use new apps. But as a user, do I want all my apps to look and feel the same (besides some theme colours)? 
 
 Nope. 
 
-When you contrast this with what BootStrap (which is kind of a component library as well as a CSS framework) offers, I 
-feel that designers have *waaaay* more freedom to customise the look and feel of their app using BootStrap than you have with Material Design. 
+When you contrast this with what Twitter's BootStrap framework (which is kind of a component library as well as a CSS framework) offers, I 
+feel that designers have *waaaay* more freedom to customise the look and feel of their app with BootStrap than with Material Design. 
 And they can do this without affecting usability or breaking common UI conventions.
 
 
@@ -142,4 +144,4 @@ change it's style by saying things like, "Make the header blue", "Change the bac
 - John Papa's talk was excellent on the need for code readability, with glimpse of a new tool that can validate a style guide.
 - Protractor plugins for automatically finding accessibilty issues looks cool. In fact, I'd like to contribute to Protractor to fix the horrible syntax for getting and setting an input element's
     value: get uses `inputElem.setText()`, set uses `inputElem.getAttribute('value')`.
-- Running the `$digest()` cycle in a Web Worker was interesting, and may be useful in certain edge cases (like prime number calculations).
+- Running the `$digest()` cycle in a Web Worker was interesting, and may be useful in certain edge cases where you need to perform a long running client-side calculation (like a prime number calculator).
