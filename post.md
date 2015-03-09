@@ -113,8 +113,8 @@ Summary: As long as TypeScript increases my development effort, I don't intend t
 I have mixed feelings about this. 
 
 ### Pros
-The Material design components that Google have built look pretty good. They appear to make it pretty easy to get a material-looking
-application working quickly. The 10-minute demo we saw on day 2 (despite some editing-tricks) was pretty good.
+The Material design components that Google have built look pretty good. They appear to make it easy to get a material-looking
+application working quickly. The 10-minute demo we saw on day 2 (despite some editing-tricks) was quite good.
 
 ### Cons
 If I use Google Material Design, won't my app be just like *every other Material Design app*? I guess it just feels *too* prescriptive, 
@@ -145,3 +145,14 @@ change it's style by saying things like, "Make the header blue", "Change the bac
 - Protractor plugins for automatically finding accessibilty issues looks cool. In fact, I'd like to contribute to Protractor to fix the horrible syntax for getting and setting an input element's
     value: get uses `inputElem.setText()`, set uses `inputElem.getAttribute('value')`.
 - Running the `$digest()` cycle in a Web Worker was interesting, and may be useful in certain edge cases where you need to perform a long running client-side calculation (like a prime number calculator).
+
+## Final plug
+I had the opportunity to attend the Advanced Angular Workshops on the day before the conference. The workshops covered Protractor testing, Advanced Directives, ngAnimate and [angular-formly](https://github.com/formly-js/angular-formly) which is a data-based form rendering component by Kent C Dodds.
+
+This last workshop especially interested me as it offered a different approach to supporting many of the same use-cases that I considered when building **[angular-form-lib](http://uglow.github.io/angular-form-lib/)** (please try it out!). The main differences I see between the two libraries (at the moment) are:
+
+- angular-form-lib still uses directive-elements to define the form elements, whereas formly uses model data
+- angular-form-lib offers the ability to create form-policies that allow you to define how you want all form across your site to behave. For example, you can define a policy that says, "When the form is submitted and there is an error, set the focus to the first field with an error", which is super-useful and accessible.
+- angular-form-lib links error-messages (regardless of how they are formatted or displayed) to the form-control, so that when the form control has the focus, screen-readers can read out the error(s) associated with that field.
+
+
