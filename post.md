@@ -9,16 +9,16 @@ Despite my continued misgivings about TypeScript (see [below](#typescript)), the
 that you don't need it to write Angular 2 applications makes me much more keen to try Angular 2 sooner, rather than later.
 
 The fact that change detection is unidirectional now (from Model > Component > View) is a good thing for understandability of
-Angular and for performance. I'm not sure if it is related to the Flux architcture's notion of unidirectional data flow, but
+Angular and for performance. I'm not sure if it is related to the Flux architecture's notion of unidirectional data flow, but
 I think it does.
 
 
 ## Component Architecure
 The component-architecture (and the declarative animation syntax coming to ngAnimate) remind me **a lot** of Adobe Flex. 
-For the uninitiated, Adobe Flex used ActionScript (almost identical to Javascript, but with optional types) which had a
-component architecture, and a declarative view syntax (like HTML), including the ability to declare animations like this:
+For the uninitiated, Adobe Flex used ActionScript (almost identical to JavaScript, but with optional types) which had a
+component architecture and a declarative view syntax (like HTML), including the ability to declare animations like this:
 
-``` html
+``` xml
 <Parallel>
   <Fade target="componentA" fromAlpha="0" toAlpha="1" duration="200"/>
   <Sequence>
@@ -39,11 +39,11 @@ reason to delay using Angular 2.
 
 
 ## Angular 1.4+ will offer a migration path to v2
-The fact that **ngNewRouter**, **ngTranslate** and **ngAnimate** are all based off a single codebase and support
+The fact that **ngNewRouter**, **ngTranslate**, and **ngAnimate** are all based off a single codebase and support
 1.4+ and 2.x is a great sign. It means:
 
-- it is *possible* to write your module once and have it work in both versions of Angular (good news for component developers)
-- the Angular team is committed to bringing good ideas back to *today's* version of Angular
+- it is *possible* to write your module once and have it work in both versions of Angular (good news for component developers).
+- the Angular team is committed to bringing good ideas back to *today's* version of Angular.
 
 
 ## Building for large applications
@@ -53,8 +53,8 @@ with Angular was salient to the work that I'm doing with Odecee. There's a few t
 - Optimising the lazy-load process to load modules with temporary routes initially, until such time as the actual module
   is loaded and loads it's own routes (and then cleans up the temporary route. This is much better than the main routing
   module having to know up-front all of the routes of the lazily-loaded modules.
-- Allowing components to look-up their configuration at run-time (we're kind-of doing that already, but it's affirming)
-- Using pre-commit hooks to run tests and ensure code has been linted before it gets into the repository
+- Allowing components to look-up their configuration at run-time (we're kind-of doing that already, but it's affirming).
+- Using pre-commit hooks to run tests and ensure code has been linted before it gets into the repository.
 
 
 
@@ -78,13 +78,13 @@ in a data-access layer (implemented as a service, in Angular).
 
 So I'm hoping that these demos that we've seen are understood by the community to be *demos*, not *how-tos* for using these
 data services. If not, every new version of Firebase/Wakenda/BackAnd that is released will force you to touch your view-logic 
-code, instead of your centralised data-access code.
+code instead of your centralised data-access code.
 
 
 <a name="typescript"></a>
 
 ## TypeScript is wonderful (if you sell tools or don't want to RTFM...)
-...which I guess is fair chunk of the programming community, now I that I think about it. But that doesn't make it right!
+...which I guess is fair chunk of the programming community, now that I think about it. But that doesn't make it right!
 
 I guess the thing that still bothers me about TypeScript is the extra work that I, as a programmer, have to do to to make my
 IDE work properly:
@@ -94,9 +94,9 @@ IDE work properly:
 
 "Two steps isn't so bad!", I hear you say! Well, then there's compiling and deployment steps:
 
-- I need an IDE that compiles the code automatically, or a build task to do this (which increases my debug loop)
+- I need an IDE that compiles the code automatically, or a build task to do this (which increases my debug loop).
 - I need to seperate the source code from the compiled code (WebStorm by default generates your JS code beside the TypeScript
-  file, but you can configure that)
+  file, but you can configure that).
 - Then I need to make sure that the generated code runs on browsers that the app must support. And depending on the ES6
   features I've used, I need to include a shim.
   
@@ -104,7 +104,7 @@ In summary, using TypeScript requires more work than my current development proc
 me of the step you could perform for Java projects, whereby you tell the IDE where the source code for a JAR file is so
 that it could help you debug the JAR. It was extra configuration that I feel I shouldn't need to do.
 
-Summary: While TypeScript increases my development effort, I don't intend to use it. But if that changes, I'll reconsider.
+Summary: As long as TypeScript increases my development effort, I don't intend to use it. But if that changes, I'll reconsider.
 
 
 ## Google Material Design
@@ -123,7 +123,7 @@ Nope.
 
 When you contrast this with what BootStrap (which is kind of a component library as well as a CSS framework) offers, I 
 feel that designers have *waaaay* more freedom to customise the look and feel of their app using BootStrap than you have with Material Design. 
-And they can do this without affecting usability or breaking common UI-conventions.
+And they can do this without affecting usability or breaking common UI conventions.
 
 
 ## Prototyping with Angular 
@@ -134,14 +134,12 @@ change it's style by saying things like, "Make the header blue", "Change the bac
 
 
 ## Other noteworthy things
-- Ionic would be my starting point for building mobile-centric apps. Lots of neat features like view-state caching 
-  (remembering which page on a tab you are viewing, so you can change tabs and come back to the one you were looking at 
-  (again, reminiscent of Adobe Flex)).
+- Ionic would be my starting point for building mobile-centric apps. It has lots of neat features like view-state caching 
+  (remembering which page on a tab you are viewing, so you can change tabs and come back to the one you were looking at). Again, reminiscent of Adobe Flex.
 - Falcor by Netflix, when it is open sourced, could be better than FireBase? Maybe? It batches service requests to enable
-  views to be served with *only* the data that they will render/use, rather than the complete object containing all the data-fields/properties
-- Benchpress tool for Protractor looks cool and helpful
-- John Papa's talk was excellent on the need for code readability, with glimpse of a new tool that can validate a style guide
-- Protractor plugins for automatically finding accessibilty issues looks cool
-  - In fact, I'd like to contribute to Protractor to fix the horrible syntax for getting and setting an input element's
-    value: get uses `inputElem.setText()`, set uses `inputElem.getAttribute('value')` 
-- Running the $digest() cycle in a Web Worker was interesting, and may be useful in certain edge cases (like prime number calculations)
+  views to be served with *only* the data that they will render/use, rather than the complete object containing all the data-fields/properties.
+- Benchpress tool for Protractor looks cool and helpful.
+- John Papa's talk was excellent on the need for code readability, with glimpse of a new tool that can validate a style guide.
+- Protractor plugins for automatically finding accessibilty issues looks cool. In fact, I'd like to contribute to Protractor to fix the horrible syntax for getting and setting an input element's
+    value: get uses `inputElem.setText()`, set uses `inputElem.getAttribute('value')`.
+- Running the `$digest()` cycle in a Web Worker was interesting, and may be useful in certain edge cases (like prime number calculations).
