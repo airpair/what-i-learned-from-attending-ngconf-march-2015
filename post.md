@@ -48,7 +48,7 @@ The fact that **ngNewRouter**, **ngTranslate** and **ngAnimate** are all based o
 
 ## Building for large applications
 Jen Bourney's [presentation](http://youtu.be/cVTN8msr5DE?list=PLOETEcp3DkCoNnlhE-7fovYvqwVPrRiY7) on building platforms
-with Angular was salient to the work that I'm doing with Odecee. There's a few tings I can apply to my current project:
+with Angular was salient to the work that I'm doing with Odecee. There's a few things I can apply to my current project:
 
 - Optimising the lazy-load process to load modules with temporary routes initially, until such time as the actual module
   is loaded and loads it's own routes (and then cleans up the temporary route. This is much better than the main routing
