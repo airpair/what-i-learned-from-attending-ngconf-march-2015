@@ -2,7 +2,7 @@ Wow! So much to process from ngConf 2015! Here are the key themes I took away.
 
 ## Angular 2 is looking pretty good
 The performance of Angular 2 over previous versions - and even over React - is (and I'm not one to exaggerate) amazing! 
-There was a [demo](http://youtu.be/LgshdUnTNPc?list=PLOETEcp3DkCoNnlhE-7fovYvqwVPrRiY7) by Dave Smith comparing a weekly
+There was a [demo](https://www.youtube.com/watch?v=XQM0K6YG18s) by Dave Smith comparing a weekly
 scheduling component running in 1.3, 1.3 + React, then in Angular 2. Check it out.
 
 Despite my continued misgivings about TypeScript (see [below](#typescript)), the fact that the developers repeatedly said
@@ -48,7 +48,7 @@ The fact that **ngNewRouter**, **ngTranslate**, and **ngAnimate** are all based 
 
 ## Building for large applications
 Jen Bourney's [presentation](http://youtu.be/cVTN8msr5DE?list=PLOETEcp3DkCoNnlhE-7fovYvqwVPrRiY7) on building platforms
-with Angular was salient to the work that I'm doing with Odecee. There's a few tings I can apply to my current project:
+with Angular was salient to the work that I'm doing with Odecee. There's a few things I can apply to my current project:
 
 - Optimising the lazy-load process to load modules with temporary routes initially, until such time as the actual module
   is loaded and loads it's own routes (and then cleans up the temporary route. This is much better than the main routing
