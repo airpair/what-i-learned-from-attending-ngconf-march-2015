@@ -1,7 +1,7 @@
 Wow! So much to process from ngConf 2015! Here are the key themes I took away.
 
 ## Angular 2 is looking pretty good
-The performance of Angular 2 over previous versions - and even over React - is (and I'm not one to exaggerate) amazing! 
+The performance of Angular 2 over previous versions - and even over React - is (and I'm not one to exaggerate) **amazing!** 
 There was a [demo](https://www.youtube.com/watch?v=XQM0K6YG18s) by Dave Smith comparing a weekly
 scheduling component running in 1.3, 1.3 + React, then in Angular 2. Check it out.
 
