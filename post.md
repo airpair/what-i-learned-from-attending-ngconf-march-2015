@@ -18,7 +18,7 @@ The component-architecture (and the declarative animation syntax coming to ngAni
 For the uninitiated, Adobe Flex used ActionScript (almost identical to JavaScript, but with optional types) which had a
 component architecture and a declarative view syntax (like HTML), including the ability to declare animations like this:
 
-``` xml
+```markup
 <Parallel>
   <Fade target="componentA" fromAlpha="0" toAlpha="1" duration="200"/>
   <Sequence>
@@ -62,7 +62,7 @@ with Angular was salient to the work that I'm doing with [Odecee](https://www.od
 All of these companies are offering ways to make it easier to talk to data stores and setup applications faster - which is great!
 My only concern is that the demos we see keep doing things like this:
 
-``` js
+```javascript
 function MyController($firebaseService/* or other db IMPLEMENTATION */) {
   this.users = $firebaseService.get('/users');
   
