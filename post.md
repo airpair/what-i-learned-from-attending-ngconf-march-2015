@@ -67,14 +67,15 @@ But this got me thinking - what do I really care about as a developer? I'm not a
 - it allows the application to be layered (models, views, view-models, services, commands, data access objects).
 - it allows me to write HTML in HTML files.
 - the above three points mean that Angular code is maintainable, which is also very important to my clients.
+- my clients are quite happy with Angular's current performance for the use-cases they have
 - there is a lot of support for it in terms of people, tools and components.
 - it offers a path to ES6/HTMLnext goodness today.
 - the community is supportive and helpful.
 - it keeps getting better (faster / more features / simpler to use).
-- it does not prevent you from using other technologies if you want, such as React or jQuery.
+- it does not prevent me from using other technologies if I want, such as React or jQuery.
 
 I don't use Angular because:
-- it is the fastest in every situation
+- it produces the fastest code in every situation
 - it is the hottest, shiniest thing on the market
 - it looks good on my resumé
 
@@ -83,7 +84,7 @@ I would use another technology (such as React) if:
 - it has a good ecosystem of tools and components that allow me to write maintainable code
 - I can still write my view separate from my code (JSX, I'm looking at you)
 
-Dave's talk was actually about how you can use Angular and React together, and the times when you would and wouldn't want to do that. So in that spirit, I would say that when I come across a business problem that requires a solution that involves a lot of DOM manipulation, and an Angular implementation is not fast enough, I would explore using ngReact next.
+Dave's talk was actually about how you can use Angular and React together, and the times when you would and wouldn't do that. So in that spirit, I would say this: when I come across a business problem that requires a solution that involves a lot of DOM manipulation, and an Angular implementation is not fast enough, I would explore using React.
 
 
 ## FireBase, BackAnd, Wakenda, Falcor
