@@ -1,8 +1,10 @@
+**Updated March 14 2015 - added ngReact section**
+
 Wow! So much to process from ngConf 2015! Here are the key themes I took away.
 
 ## Angular 2 is looking pretty good
-The performance of Angular 2 over previous versions - and even over React - is (and I'm not one to exaggerate) **amazing!** 
-There was a [demo](https://www.youtube.com/watch?v=XQM0K6YG18s) by Dave Smith comparing a weekly
+The performance of Angular 2 over previous versions - and even over React - is (and I'm not one to exaggerate) **great!** 
+There was a [demo](https://www.youtube.com/watch?v=XQM0K6YG18s&list=PLOETEcp3DkCoNnlhE-7fovYvqwVPrRiY7&index=33) by Dave Smith comparing a weekly
 scheduling component running in 1.3, 1.3 + React, then in Angular 2. Check it out.
 
 Despite my continued misgivings about TypeScript (see [below](#typescript)), the fact that the developers repeatedly said
@@ -56,6 +58,32 @@ with Angular was salient to the work that I'm doing with [Odecee](https://www.od
 - Allowing components to look-up their configuration at run-time (we're kind-of doing that already, but it's affirming).
 - Using pre-commit hooks to run tests and ensure code has been linted before it gets into the repository.
 
+##Angular and React
+I felt compelled to update this article with brief discussion on Angular and React. [Matthias G](https://plus.google.com/u/0/105361096342698384541) prompted me to recheck the [Angular + React video](https://www.youtube.com/watch?v=XQM0K6YG18s&list=PLOETEcp3DkCoNnlhE-7fovYvqwVPrRiY7&index=33) by Dave Smith, as it now has an additional 2 minutes of Dave explaining how the demo at the conference wasn't entirely fair to React. He then creates a fairer comparison between Angular 2 and React with the result being that they are almost as fast as each other, in this instance.
+
+But this got me thinking - what do I really care about as a developer? I'm not an Angular fan-boi. I have used many libraries (like JQuery, jqMobile) and custom frameworks before to create web applications and sites. But I currently use AngularJS because:
+
+- it is easily testable, which is **very important** to the financial companies that I work for.
+- it allows the application to be layered (models, views, view-models, services, commands, data access objects).
+- it allows me to write HTML in HTML files.
+- the above three points mean that Angular code is maintainable, which is also very important to my clients.
+- there is a lot of support for it in terms of people, tools and components.
+- it offers a path to ES6/HTMLnext goodness today.
+- the community is supportive and helpful.
+- it keeps getting better (faster / more features / simpler to use).
+- it does not prevent you from using other technologies if you want, such as React or jQuery.
+
+I don't use Angular because:
+- it is the fastest in every situation
+- it is the hottest, shiniest thing on the market
+- it looks good on my resumé
+
+I would use another technology (such as React) if:
+- the global market decides that React is a better platform for web development, and clients start demanding we build systems using that technology
+- it has a good ecosystem of tools and components that allow me to write maintainable code
+- I can still write my view separate from my code (JSX, I'm looking at you)
+
+Dave's talk was actually about how you can use Angular and React together, and the times when you would and wouldn't want to do that. So in that spirit, I would say that when I come across a business problem that requires a solution that involves a lot of DOM manipulation, and an Angular implementation is not fast enough, I would explore using ngReact next.
 
 
 ## FireBase, BackAnd, Wakenda, Falcor
